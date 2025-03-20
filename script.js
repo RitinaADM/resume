@@ -47,7 +47,7 @@ function typeWriter(element, text, speed) {
 }
 
 window.addEventListener('load', () => {
-    typeWriter(document.getElementById('name'), 'Андрей Иванов', 100);
+    typeWriter(document.getElementById('name'), 'Андрей Голиков', 100);
     setTimeout(() => typeWriter(document.getElementById('title'), 'Backend & DevOps Специалист', 100), 1500);
 });
 
