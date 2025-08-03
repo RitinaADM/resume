@@ -2,16 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('Deploy static site') {
             steps {
-                checkout scm
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                sh 'rm -rf /var/www/my-site/*'
-                sh 'cp -r * /var/www/my-site/'
+                sh '''
+                    mkdir -p /var/www/my-site/
+                    cp -r index.html script.js styles.css /var/www/my-site/
+                '''
             }
         }
     }
